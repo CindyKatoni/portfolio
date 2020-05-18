@@ -16,7 +16,7 @@ section {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 100%;/*the image will scale down if it has to, but never scale up to be larger than its original size*/
     margin-bottom: 1em;
 }
 strong {
@@ -61,7 +61,7 @@ margin-bottom: .25em;
 }
 .section__subtitle {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     background: #16e0bd;
     padding: .25em 1em;
     font-family: 'Source Code Pro', monospace;;
@@ -118,33 +118,33 @@ header {
     }
 
     .section__subtitle--intro {
-        align-self: stretch;
+        align-self: start;
         grid-column: -1/1;
         grid-row: 2;
         text-align: center;
         position: relative;
         left: 11em;
-        width: calc(100% + 1.5em);
+        width: calc(100%);
     }
 }
 
 /*Section B */
-main {
-    text-align: center;
-}
 .grid {
     display: inline-block;
+    margin-right: 2em;
+    margin-left: 2em;
+
 }
-#section-b {
+#work {
     background: #333;
     padding: 2em 1em 1em;
 }
-#section-b ul, ol {
+#work ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-#section-b li {
+#work li {
     margin-bottom: 2em;
     background: #fff;
     color: #333;
@@ -156,19 +156,84 @@ main {
 @media (min-width: 700px){
     grid{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
 
     }
-    #section-b ul {
+    #work ul {
         grid-column: 2/4;
         display: flex;
         justify-content: space-around;
+
     }
-    #section-b li {
+    #work li {
         width: 31%;
     }
 }
 
+/*Section C*/
+/* Style inputs, select elements and textareas */
+input[type=text],input[type=email], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #16e0bd;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Style the container */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
 
 
 
