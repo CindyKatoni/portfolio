@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!--Header Section with logo and nav-->
+<!-- Section with logo and nav-->
 <header>
     <div class="logo">Dev. Ck.</div>
 </header>
@@ -25,7 +25,8 @@
         <img src="mimi.png" alt="a picture of me in my graduation gown" class="intro__img">
 </section>
 
-<section id="section-b" class="grid">
+<!--Section B-->
+<section id="work" class="grid">
     <h2 class="section__title section__title--services">WORK EXPERIENCE</h2>
         <ul>
             <li>
@@ -74,6 +75,53 @@
             </li>
         </ul>
         <a href="https://github.com/CindyKatoni" class="github" target="_blank">View Github</a>
+</section>
+
+<!--Section C -->
+<section class="contact__info">
+    <div class="container">
+        <form action="action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div><!--End of firstname div-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div><!--End of lastname div-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="Email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="Email" name="Email" placeholder="Email.." required>
+                </div>
+            </div><!--End of email div-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Message</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+            </div><!--End of textarea div-->
+            <div class="row">
+                <input type="submit" value="Submit"></input>
+            </div><!--End of submit div-->
+
+
+
+
+        </form>
+    </div>
 </section>
 
 </body>
